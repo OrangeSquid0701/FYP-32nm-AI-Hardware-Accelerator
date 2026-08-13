@@ -11,6 +11,9 @@ These results demonstrate that the proposed accelerator provides a high-performa
 ## Performance Overview
 <img width="2000" height="870" alt="image" src="https://github.com/user-attachments/assets/2fe95502-f136-4ab3-a134-125f9eb0cd02" />
 
+<img width="1015" height="336" alt="image" src="https://github.com/user-attachments/assets/9c8cd65f-0f65-49bb-8d3e-dc308a4596cc" />
+
+
 
 
 ## Disclaimer
