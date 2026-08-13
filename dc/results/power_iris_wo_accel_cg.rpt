@@ -1,0 +1,58 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : soc_top_m0_sram_accelerator_interconnect
+Version: V-2023.12-SP2
+Date   : Fri Jun 12 16:56:09 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v125c (File: /data/synopsys/lib/saed32nm/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db)
+
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+Warning: Cannot report correlated power unless power prediction mode is set. (PWR-727)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                 270.2849    190.2359   4.605e+02 (59%)  1.235e+09
+Estimated Clock Tree Power   N/A         N/A         N/A (N/A)        N/A
+--------------------------------------------------------------------------------
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    144.8522           59.3240        1.0022e+08          304.3996  (  17.95%)  i
+register          39.7507            5.6366        4.7895e+08          524.3326  (  30.92%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational     85.6820          125.2753        6.5590e+08          866.8585  (  51.12%)
+--------------------------------------------------------------------------------------------------
+Total            270.2849 uW       190.2359 uW     1.2351e+09 pW     1.6956e+03 uW
+1

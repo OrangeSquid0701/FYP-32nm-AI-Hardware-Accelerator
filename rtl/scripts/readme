@@ -1,0 +1,29 @@
+vcs SoC_with_accel/soc_top_tb.v SoC_with_accel/soc_top_m0_sram_accelerator_interconnect.v SoC_with_accel/ahb_interconnect.v SoC_with_accel/sram_ahb.v SoC_with_accel/accelerator_top.v SoC_with_accel/systolic_with_ahb.v SoC_with_accel/tile_add_ahb.v SoC_with_accel/input_skew_buffer.v SoC_with_accel/output_deskew_buffer.v SoC_with_accel/ahb_wrapper.v SoC_with_accel/systolic_4x4_ws.v SoC_with_accel/pe_ws.v SoC_with_accel/fp_mul.v SoC_with_accel/fp_add.v SoC_with_accel/CORTEXM0.v SoC_with_accel/cm0_top.v SoC_with_accel/cm0_top_sys.v SoC_with_accel/cm0_core.v SoC_with_accel/cm0_core_alu.v SoC_with_accel/cm0_core_spu.v SoC_with_accel/cm0_core_mul.v SoC_with_accel/cm0_core_psr.v SoC_with_accel/cm0_core_gpr.v SoC_with_accel/cm0_core_pfu.v SoC_with_accel/cm0_core_ctl.v SoC_with_accel/cm0_core_dec.v SoC_with_accel/cm0_nvic.v SoC_with_accel/cm0_nvic_reg.v SoC_with_accel/cm0_nvic_main.v SoC_with_accel/cm0_matrix.v SoC_with_accel/cm0_matrix_sel.v SoC_with_accel/cm0_top_dbg.v SoC_with_accel/cm0_dbg_ctl.v SoC_with_accel/cm0_dbg_bpu.v SoC_with_accel/cm0_dbg_dwt.v SoC_with_accel/cm0_dbg_if.v SoC_with_accel/cm0_dbg_sel.v SoC_with_accel/cm0_top_clk.v SoC_with_accel/cm0_acg.v
+
+vcs SoC_wo_accel/soc_top_tb.v SoC_wo_accel/soc_top_m0_sram_accelerator_interconnect.v SoC_wo_accel/ahb_interconnect.v SoC_wo_accel/sram_ahb.v SoC_wo_accel/CORTEXM0.v SoC_wo_accel/cm0_top.v SoC_wo_accel/cm0_top_sys.v SoC_wo_accel/cm0_core.v SoC_wo_accel/cm0_core_alu.v SoC_wo_accel/cm0_core_spu.v SoC_wo_accel/cm0_core_mul.v SoC_wo_accel/cm0_core_psr.v SoC_wo_accel/cm0_core_gpr.v SoC_wo_accel/cm0_core_pfu.v SoC_wo_accel/cm0_core_ctl.v SoC_wo_accel/cm0_core_dec.v SoC_wo_accel/cm0_nvic.v SoC_wo_accel/cm0_nvic_reg.v SoC_wo_accel/cm0_nvic_main.v SoC_wo_accel/cm0_matrix.v SoC_wo_accel/cm0_matrix_sel.v SoC_wo_accel/cm0_top_dbg.v SoC_wo_accel/cm0_dbg_ctl.v SoC_wo_accel/cm0_dbg_bpu.v SoC_wo_accel/cm0_dbg_dwt.v SoC_wo_accel/cm0_dbg_if.v SoC_wo_accel/cm0_dbg_sel.v SoC_wo_accel/cm0_top_clk.v SoC_wo_accel/cm0_acg.v
+
+vcs SoC_wo_accel/soc_top_tb.v SoC_wo_accel/soc_top_m0_sram_accelerator_interconnect.v SoC_wo_accel/ahb_interconnect.v SoC_wo_accel/sram_ahb.v SoC_wo_accel/CORTEXM0.v SoC_wo_accel/cm0_top.v SoC_wo_accel/cm0_top_sys.v SoC_wo_accel/cm0_core.v SoC_wo_accel/cm0_core_alu.v SoC_wo_accel/cm0_core_spu.v SoC_wo_accel/cm0_core_mul.v SoC_wo_accel/cm0_core_psr.v SoC_wo_accel/cm0_core_gpr.v SoC_wo_accel/cm0_core_pfu.v SoC_wo_accel/cm0_core_ctl.v SoC_wo_accel/cm0_core_dec.v SoC_wo_accel/cm0_nvic.v SoC_wo_accel/cm0_nvic_reg.v SoC_wo_accel/cm0_nvic_main.v SoC_wo_accel/cm0_matrix.v SoC_wo_accel/cm0_matrix_sel.v SoC_wo_accel/cm0_top_dbg.v SoC_wo_accel/cm0_dbg_ctl.v SoC_wo_accel/cm0_dbg_bpu.v SoC_wo_accel/cm0_dbg_dwt.v SoC_wo_accel/cm0_dbg_if.v SoC_wo_accel/cm0_dbg_sel.v SoC_wo_accel/cm0_top_clk.v SoC_wo_accel/cm0_acg.v SoC_wo_accel/accelerator_top.v SoC_wo_accel/systolic_with_ahb.v SoC_wo_accel/tile_add_ahb.v SoC_wo_accel/input_skew_buffer.v SoC_wo_accel/output_deskew_buffer.v SoC_wo_accel/ahb_wrapper.v SoC_wo_accel/systolic_4x4_ws.v SoC_wo_accel/pe_ws.v SoC_wo_accel/fp_mul.v SoC_wo_accel/fp_add.v
+ 
+For running accelerator with AHB:
+
+vcs -R accelerator_top_tb.v accelerator_top.v systolic_with_ahb.v tile_add_ahb.v input_skew_buffer.v output_deskew_buffer.v ahb_wrapper.v systolic_4x4_ws.v pe_ws.v fp_mul.v fp_add.v
+
+
+For running systolic array:
+
+vcs -R ann_systolic_4x4_ws_tb.v systolic_4x4_ws.v pe_ws.v fp_mul.v fp_add.v
+
+
+For running processing element (MAC unit):
+
+vcs -R pe_ws_tb.v pe_ws.v fp_mul.v fp_add.v
+
+
+For running IEEE754 addition:
+
+vcs -R fp_add_tb.v fp_add.v
+
+
+For running IEEE754 multiplication:
+
+vcs -R fp_mul_tb.v fp_mul.v

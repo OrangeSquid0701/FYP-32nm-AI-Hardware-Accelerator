@@ -1,0 +1,148 @@
+Information: Updating design information... (UID-85)
+Warning: Design 'accelerator_top' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : accelerator_top
+Version: V-2023.12-SP2
+Date   : Sat May  2 17:43:04 2026
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+  Startpoint: u_systolic/u_core/ROW[3].COL[1].pe/a_out_reg[19]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_systolic/u_core/ROW[3].COL[2].pe/sum_out_reg[30]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.10       0.10
+  u_systolic/u_core/ROW[3].COL[1].pe/a_out_reg[19]/CLK (DFFARX1_RVT)
+                                                          0.00 #     0.10 r
+  u_systolic/u_core/ROW[3].COL[1].pe/a_out_reg[19]/Q (DFFARX1_RVT)
+                                                          0.22       0.32 f
+  u_systolic/u_core/ROW[3].COL[1].pe/U1396/Y (NBUFFX2_RVT)
+                                                          0.10 *     0.41 f
+  u_systolic/u_core/ROW[3].COL[1].pe/a_out[19] (pe_ws_2)
+                                                          0.00       0.41 f
+  U7062/Y (NBUFFX8_RVT)                                   0.12 *     0.53 f
+  U9871/Y (XNOR2X2_RVT)                                   0.16 *     0.69 r
+  U18274/Y (NBUFFX4_RVT)                                  0.11 *     0.80 r
+  U9874/Y (NAND2X4_RVT)                                   0.14 *     0.95 f
+  U10175/Y (OAI22X1_RVT)                                  0.13 *     1.08 r
+  U10181/S (FADDX1_RVT)                                   0.16 *     1.24 f
+  U10238/S (FADDX1_RVT)                                   0.16 *     1.40 r
+  U10932/CO (FADDX1_RVT)                                  0.10 *     1.50 r
+  U10944/S (FADDX1_RVT)                                   0.16 *     1.66 f
+  U10948/S (FADDX1_RVT)                                   0.18 *     1.83 r
+  U10963/Y (NAND2X0_RVT)                                  0.08 *     1.91 f
+  U10965/Y (OAI21X1_RVT)                                  0.15 *     2.05 r
+  U10966/Y (AOI21X1_RVT)                                  0.07 *     2.12 f
+  U10967/Y (OAI21X1_RVT)                                  0.09 *     2.21 r
+  U10968/Y (AOI21X1_RVT)                                  0.11 *     2.32 f
+  U11011/Y (OAI21X1_RVT)                                  0.13 *     2.45 r
+  U11019/Y (XNOR2X1_RVT)                                  0.14 *     2.59 f
+  U11020/Y (INVX1_RVT)                                    0.06 *     2.65 r
+  U11022/Y (OR2X1_RVT)                                    0.08 *     2.74 r
+  U11023/Y (OR2X1_RVT)                                    0.06 *     2.80 r
+  U11067/Y (OR2X1_RVT)                                    0.06 *     2.86 r
+  U11068/Y (OR2X1_RVT)                                    0.06 *     2.92 r
+  U11069/Y (OR2X1_RVT)                                    0.06 *     2.98 r
+  U11070/Y (OR2X1_RVT)                                    0.06 *     3.04 r
+  U11074/Y (OR2X1_RVT)                                    0.06 *     3.11 r
+  U11132/Y (XOR2X1_RVT)                                   0.12 *     3.23 f
+  U11134/Y (XOR2X1_RVT)                                   0.12 *     3.35 r
+  U11135/Y (XNOR2X1_RVT)                                  0.10 *     3.45 f
+  U11136/Y (NOR2X0_RVT)                                   0.09 *     3.53 r
+  U11137/Y (OR2X1_RVT)                                    0.06 *     3.60 r
+  U11138/Y (OA21X1_RVT)                                   0.07 *     3.66 r
+  U11141/Y (AO21X1_RVT)                                   0.09 *     3.75 r
+  U12890/Y (NBUFFX4_RVT)                                  0.08 *     3.83 r
+  U12891/Y (INVX2_RVT)                                    0.07 *     3.90 f
+  U11152/Y (OAI21X1_RVT)                                  0.17 *     4.07 r
+  U11156/Y (OR2X1_RVT)                                    0.08 *     4.15 r
+  U11185/CO (FADDX1_RVT)                                  0.10 *     4.24 r
+  U11191/CO (FADDX1_RVT)                                  0.10 *     4.34 r
+  U11198/CO (FADDX2_RVT)                                  0.10 *     4.44 r
+  U11206/CO (FADDX1_RVT)                                  0.10 *     4.54 r
+  U11212/CO (FADDX1_RVT)                                  0.10 *     4.64 r
+  U11219/CO (FADDX1_RVT)                                  0.09 *     4.74 r
+  U11218/Y (XOR2X1_RVT)                                   0.07 *     4.81 r
+  U11220/Y (OR3X1_RVT)                                    0.09 *     4.89 r
+  U11328/Y (OR2X1_RVT)                                    0.08 *     4.97 r
+  U11329/Y (OR2X1_RVT)                                    0.08 *     5.06 r
+  U11390/Y (OR2X1_RVT)                                    0.11 *     5.17 r
+  U11504/Y (OR2X1_RVT)                                    0.08 *     5.25 r
+  U11505/Y (OR2X1_RVT)                                    0.06 *     5.31 r
+  U11506/Y (NAND3X0_RVT)                                  0.17 *     5.47 f
+  U11530/Y (NAND2X0_RVT)                                  0.12 *     5.59 r
+  U11531/Y (NAND2X0_RVT)                                  0.05 *     5.64 f
+  U11563/Y (OA22X1_RVT)                                   0.09 *     5.73 f
+  U11566/Y (AO22X1_RVT)                                   0.08 *     5.82 f
+  U11613/Y (OA221X1_RVT)                                  0.11 *     5.92 f
+  U11915/Y (AO221X1_RVT)                                  0.11 *     6.03 f
+  U11928/Y (NAND2X0_RVT)                                  0.05 *     6.08 r
+  U11929/Y (OR2X2_RVT)                                    0.10 *     6.18 r
+  U15927/Y (NBUFFX4_RVT)                                  0.09 *     6.27 r
+  U15928/Y (INVX2_RVT)                                    0.08 *     6.34 f
+  U11945/Y (MUX21X1_RVT)                                  0.13 *     6.47 f
+  U11946/Y (XOR2X1_RVT)                                   0.13 *     6.60 r
+  U11952/Y (AOI21X1_RVT)                                  0.11 *     6.70 f
+  U11954/Y (OAI21X1_RVT)                                  0.12 *     6.82 r
+  U11973/Y (AOI21X1_RVT)                                  0.10 *     6.92 f
+  U12014/Y (OAI21X1_RVT)                                  0.13 *     7.04 r
+  U6463/Y (AO21X1_RVT)                                    0.09 *     7.14 r
+  U12123/CO (FADDX1_RVT)                                  0.10 *     7.24 r
+  U12182/CO (FADDX1_RVT)                                  0.10 *     7.34 r
+  U12196/CO (FADDX1_RVT)                                  0.10 *     7.44 r
+  U12195/CO (FADDX1_RVT)                                  0.10 *     7.54 r
+  U12199/CO (FADDX1_RVT)                                  0.10 *     7.64 r
+  U12198/CO (FADDX1_RVT)                                  0.10 *     7.74 r
+  U12183/CO (FADDX1_RVT)                                  0.10 *     7.84 r
+  U12192/CO (FADDX1_RVT)                                  0.10 *     7.94 r
+  U12191/S (FADDX1_RVT)                                   0.17 *     8.12 f
+  U12310/Y (NOR2X0_RVT)                                   0.10 *     8.21 r
+  U12311/Y (OR2X1_RVT)                                    0.07 *     8.28 r
+  U12312/Y (INVX1_RVT)                                    0.04 *     8.31 f
+  U15286/Y (OR2X1_RVT)                                    0.06 *     8.37 f
+  U15287/Y (XOR2X1_RVT)                                   0.11 *     8.49 r
+  U15342/CO (FADDX1_RVT)                                  0.10 *     8.59 r
+  U15607/CO (FADDX1_RVT)                                  0.11 *     8.70 r
+  U15839/CO (FADDX1_RVT)                                  0.10 *     8.80 r
+  U16063/CO (FADDX1_RVT)                                  0.10 *     8.90 r
+  U16076/CO (FADDX1_RVT)                                  0.10 *     9.00 r
+  U16086/CO (FADDX1_RVT)                                  0.10 *     9.10 r
+  U16091/CO (FADDX1_RVT)                                  0.09 *     9.19 r
+  U16093/Y (XOR2X1_RVT)                                   0.08 *     9.27 r
+  U16094/Y (AO222X1_RVT)                                  0.09 *     9.36 r
+  u_systolic/u_core/ROW[3].COL[2].pe/sum_out_reg[30]/D (DFFARX1_RVT)
+                                                          0.00 *     9.36 r
+  data arrival time                                                  9.36
+
+  clock HCLK (rise edge)                                 10.00      10.00
+  clock network delay (ideal)                             0.10      10.10
+  clock uncertainty                                      -0.10      10.00
+  u_systolic/u_core/ROW[3].COL[2].pe/sum_out_reg[30]/CLK (DFFARX1_RVT)
+                                                          0.00      10.00 r
+  library setup time                                     -0.06       9.94
+  data required time                                                 9.94
+  --------------------------------------------------------------------------
+  data required time                                                 9.94
+  data arrival time                                                 -9.36
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.58
+
+
+1

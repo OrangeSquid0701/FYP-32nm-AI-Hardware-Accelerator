@@ -1,0 +1,17 @@
+****************************************
+Report : clock
+Design : accelerator_top
+Version: V-2023.12-SP2
+Date   : Thu May  7 14:26:07 2026
+****************************************
+
+Attributes:
+    p - Propagated clock
+    G - Generated  clock
+    I - Inactive   clock
+
+Clock             Period          Waveform            Attrs     Sources
+-----------------------------------------------------------------------
+HCLK               10.00          {0 5}               p         {HCLK}
+
+1

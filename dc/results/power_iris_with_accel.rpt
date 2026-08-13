@@ -1,0 +1,62 @@
+Information: Building the design 'sram_16384x32'. (HDL-193)
+Warning: Cannot find the design 'sram_16384x32' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'sram_16384x32' in 'sram_ahb'. (LINK-5)
+Information: Updating design information... (UID-85)
+Warning: Design 'soc_top_m0_sram_accelerator_interconnect' contains 1 high-fanout nets. A fanout number of 1000 will be used for delay calculations involving these nets. (TIM-134)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : soc_top_m0_sram_accelerator_interconnect
+Version: V-2023.12-SP2
+Date   : Fri Jun 12 00:59:51 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v125c (File: /data/synopsys/lib/saed32nm/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db)
+
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+Warning: Cannot report correlated power unless power prediction mode is set. (PWR-727)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                2.199e+03   4.538e+04   4.758e+04 (5%)   1.211e+10
+Estimated Clock Tree Power   N/A         N/A         N/A (N/A)        N/A
+--------------------------------------------------------------------------------
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network  2.0764e+03        4.5212e+04        1.1371e+08        4.7402e+04  (  79.41%)  i
+register          14.6338            9.0786        2.4110e+09        2.4347e+03  (   4.08%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    107.5017          161.5317        9.5863e+09        9.8553e+03  (  16.51%)
+--------------------------------------------------------------------------------------------------
+Total          2.1986e+03 uW     4.5383e+04 uW     1.2111e+10 pW     5.9692e+04 uW
+1

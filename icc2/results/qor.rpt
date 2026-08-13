@@ -1,0 +1,137 @@
+****************************************
+Report : qor
+Design : accelerator_top
+Version: V-2023.12
+Date   : Thu May  7 15:07:49 2026
+****************************************
+Information: Timer using 'CRPR'. (TIM-050)
+
+
+Scenario           'func.fast'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      6
+Critical Path Length:              0.92
+Critical Path Slack:               8.94
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func.fast'
+Timing Path Group  '**reg2out_default**'
+----------------------------------------
+Levels of Logic:                     98
+Critical Path Length:              8.60
+Critical Path Slack:               0.89
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func.fast'
+Timing Path Group  'HCLK'
+----------------------------------------
+Levels of Logic:                    100
+Critical Path Length:              9.40
+Critical Path Slack:               0.45
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+Scenario           'func.slow'
+Timing Path Group  '**in2reg_default**'
+----------------------------------------
+Levels of Logic:                      6
+Critical Path Length:              0.93
+Critical Path Slack:               8.93
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func.slow'
+Timing Path Group  '**reg2out_default**'
+----------------------------------------
+Levels of Logic:                     98
+Critical Path Length:              8.75
+Critical Path Slack:               0.74
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+----------------------------------------
+
+Scenario           'func.slow'
+Timing Path Group  'HCLK'
+----------------------------------------
+Levels of Logic:                     99
+Critical Path Length:              9.53
+Critical Path Slack:               0.32
+Critical Path Clk Period:         10.00
+Total Negative Slack:              0.00
+No. of Violating Paths:               0
+Worst Hold Violation:              0.00
+Total Hold Violation:              0.00
+No. of Hold Violations:               0
+----------------------------------------
+
+
+Cell Count
+----------------------------------------
+Hierarchical Cell Count:             21
+Hierarchical Port Count:           2773
+Leaf Cell Count:                  75568
+Buf/Inv Cell Count:               15368
+Buf Cell Count:                    5392
+Inv Cell Count:                    9976
+Combinational Cell Count:         72316
+   Single-bit Isolation Cell Count:                        0
+   Multi-bit Isolation Cell Count:                         0
+   Isolation Cell Banking Ratio:                           0.00%
+   Single-bit Level Shifter Cell Count:                    0
+   Multi-bit Level Shifter Cell Count:                     0
+   Level Shifter Cell Banking Ratio:                       0.00%
+   Single-bit ELS Cell Count:                              0
+   Multi-bit ELS Cell Count:                               0
+   ELS Cell Banking Ratio:                                 0.00%
+Sequential Cell Count:             3252
+   Integrated Clock-Gating Cell Count:                     0
+   Sequential Macro Cell Count:                            0
+   Single-bit Sequential Cell Count:                       3252
+   Multi-bit Sequential Cell Count:                        0
+   Sequential Cell Banking Ratio:                          0.00%
+   BitsPerflop:                                            1.00
+Macro Count:                          0
+----------------------------------------
+
+
+Area
+----------------------------------------
+Combinational Area:           194883.72
+Noncombinational Area:         23540.85
+Buf/Inv Area:                  26038.58
+Total Buffer Area:             13197.19
+Total Inverter Area:           12841.39
+Macro/Black Box Area:              0.00
+Net Area:                             0
+Net XLength:                  772325.89
+Net YLength:                  876747.37
+----------------------------------------
+Cell Area (netlist):                         218424.57
+Cell Area (netlist and physical only):       218424.57
+Net Length:                  1649073.26
+
+
+Design Rules
+----------------------------------------
+Total Number of Nets:             81351
+Nets with Violations:                63
+Max Trans Violations:                 0
+Max Cap Violations:                  63
+----------------------------------------
+
+1

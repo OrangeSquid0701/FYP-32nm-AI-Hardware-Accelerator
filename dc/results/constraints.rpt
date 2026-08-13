@@ -1,0 +1,79 @@
+ 
+****************************************
+Report : constraint
+        -all_violators
+Design : accelerator_top
+Version: V-2023.12-SP2
+Date   : Sat May  2 17:43:04 2026
+****************************************
+
+
+   max_capacitance
+
+                             Required        Actual
+   Net                      Capacitance    Capacitance       Slack
+   -----------------------------------------------------------------
+   u_tile_add/n9554             8.00           9.51          -1.51  (VIOLATED)
+   u_tile_add/n9552             8.00           9.40          -1.40  (VIOLATED)
+   n3046                        8.00           9.33          -1.33  (VIOLATED)
+   u_systolic/u_core/ROW[1].COL[3].pe/n1965
+                               16.00          17.29          -1.29  (VIOLATED)
+   n6900                        8.00           9.26          -1.26  (VIOLATED)
+   u_systolic/u_core/v_wire[1][2][10]
+                               16.00          17.01          -1.01  (VIOLATED)
+   u_tile_add/n9174            16.00          17.00          -1.00  (VIOLATED)
+   u_tile_add/n9345             8.00           8.93          -0.93  (VIOLATED)
+   n4434                        8.00           8.91          -0.91  (VIOLATED)
+   u_tile_add/results[5][22]
+                               16.00          16.89          -0.89  (VIOLATED)
+   u_tile_add/n9555             8.00           8.88          -0.88  (VIOLATED)
+   u_tile_add/n9553             8.00           8.85          -0.85  (VIOLATED)
+   u_tile_add/n10149            8.00           8.73          -0.73  (VIOLATED)
+   n15814                       8.00           8.66          -0.66  (VIOLATED)
+   u_systolic/u_core/ROW[1].COL[3].pe/weight_reg[0]
+                               16.00          16.57          -0.57  (VIOLATED)
+   u_tile_add/results[5][19]
+                               16.00          16.56          -0.56  (VIOLATED)
+   u_tile_add/n8971            16.00          16.53          -0.53  (VIOLATED)
+   n15946                       8.00           8.49          -0.49  (VIOLATED)
+   u_tile_add/n9444             8.00           8.48          -0.48  (VIOLATED)
+   u_tile_add/n9176             8.00           8.42          -0.42  (VIOLATED)
+   u_tile_add/n9443             8.00           8.30          -0.30  (VIOLATED)
+   u_tile_add/n8769             8.00           8.30          -0.30  (VIOLATED)
+   u_systolic/u_core/h_wire[3][2][24]
+                               16.00          16.26          -0.26  (VIOLATED)
+   u_systolic/u_core/h_wire[2][1][28]
+                               16.00          16.23          -0.23  (VIOLATED)
+   u_tile_add/n8530            16.00          16.22          -0.22  (VIOLATED)
+   n17090                      16.00          16.09          -0.09  (VIOLATED)
+   u_systolic/u_core/h_wire[2][1][29]
+                               16.00          16.08          -0.08  (VIOLATED)
+   n18240                       8.00           8.04          -0.04  (VIOLATED)
+   u_systolic/u_skew_buffer/r3_d2[3]
+                               16.00          16.04          -0.04  (VIOLATED)
+   u_systolic/u_core/ROW[0].COL[2].pe/weight_reg[29]
+                               16.00          16.02          -0.02  (VIOLATED)
+   n3034                        8.00           8.01          -0.01  (VIOLATED)
+
+   -----------------------------------------------------------------
+   Total                      31                -19.28  
+
+   max_area
+
+                             Required        Actual
+   Design                      Area           Area           Slack
+   -----------------------------------------------------------------
+   accelerator_top              0.00       212645.84      -212645.84
+                                                                    (VIOLATED)
+
+
+   max_leakage_power
+
+                             Required        Actual
+   Design                   Leakage Power  Leakage Power     Slack
+   -----------------------------------------------------------------
+   accelerator_top              0.00       10585513984.00 -10585513984.00
+                                                                    (VIOLATED)
+
+
+1

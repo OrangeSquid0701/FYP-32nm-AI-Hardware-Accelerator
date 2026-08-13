@@ -1,0 +1,16 @@
+source /synopsys/prime/V-2023.12-SP2/admin/setup/.synopsys_pt.setup
+source /home/user20/js_fyp/pt/.synopsys_pt.setup
+read_verilog ../icc2/results/accel_top.v
+link_design accelerator_top
+read_parasitics -f spef ../icc2/results/accel_top.minTLU_125.spef
+#read_parasitics -f spef ../icc2/results/accel_top.maxTLU_125.spef
+load_upf ../icc2/results/accel_top.upf
+source -echo -verbose pt_constraints.tcl
+set power_enable_analysis true
+redirect -file results/pt_clock_ff.rpt {report_clock}
+redirect -file results/pt_timing_ff.rpt {report_timing}
+redirect -file results/pt_timing_delay_min_ff.rpt {report_timing -delay min}
+redirect -file results/pt_power_ff.rpt {report_power}
+redirect -file results/pt_qor_ff.rpt {report_qor}
+save_indesign_session /tmp/.gca_MyOkYx 
+

@@ -1,0 +1,61 @@
+Information: Building the design 'sram_16384x32'. (HDL-193)
+Warning: Cannot find the design 'sram_16384x32' in the library 'WORK'. (LBR-1)
+Warning: Unable to resolve reference 'sram_16384x32' in 'sram_ahb'. (LINK-5)
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : power
+        -analysis_effort low
+Design : soc_top_m0_sram_accelerator_interconnect
+Version: V-2023.12-SP2
+Date   : Fri Jun 12 17:08:39 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed32rvt_ss0p95v125c (File: /data/synopsys/lib/saed32nm/lib/stdcell_rvt/db_nldm/saed32rvt_ss0p95v125c.db)
+
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+
+Global Operating Voltage = 0.95 
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+Attributes
+----------
+i - Including register clock pin internal power
+
+Warning: Cannot report correlated power unless power prediction mode is set. (PWR-727)
+Power Breakdown
+---------------
+
+                             Cell        Driven Net  Tot Dynamic      Cell
+                             Internal    Switching   Power (uW)       Leakage
+Cell                         Power (uW)  Power (uW)  (% Cell/Tot)     Power (pW)
+--------------------------------------------------------------------------------
+Netlist Power                 370.7131    229.1134   5.998e+02 (62%)  1.288e+09
+Estimated Clock Tree Power   N/A         N/A         N/A (N/A)        N/A
+--------------------------------------------------------------------------------
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network    259.0920           62.8349        1.1107e+08          432.9920  (  22.93%)  i
+register          10.2006            7.3114        4.8395e+08          501.4644  (  26.56%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational    101.4199          158.9672        6.9345e+08          953.8376  (  50.51%)
+--------------------------------------------------------------------------------------------------
+Total            370.7125 uW       229.1134 uW     1.2885e+09 pW     1.8883e+03 uW
+1

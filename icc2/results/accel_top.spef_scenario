@@ -1,0 +1,6 @@
+results/accel_top.spef.maxTLU_125.spef for scenarios: 
+	 scenario: func.slow, corner type: late/early
+
+results/accel_top.spef.minTLU_125.spef for scenarios: 
+	 scenario: func.fast, corner type: late/early
+

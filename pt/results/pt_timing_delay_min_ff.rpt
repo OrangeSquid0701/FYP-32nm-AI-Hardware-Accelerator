@@ -1,0 +1,47 @@
+****************************************
+Report : timing
+	-path_type full
+	-delay_type min
+	-max_paths 1
+	-sort_by slack
+Design : accelerator_top
+Version: V-2023.12-SP2
+Date   : Thu May  7 14:31:16 2026
+****************************************
+
+
+  Startpoint: u_systolic/u_skew_buffer/r3_d1_reg[13]
+               (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_systolic/u_skew_buffer/r3_d2_reg[13]
+               (rising edge-triggered flip-flop clocked by HCLK)
+  Last common pin: HCLK
+  Path Group: HCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  ------------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        0.08       0.08
+  u_systolic/u_skew_buffer/r3_d1_reg[13]/CLK (DFFARX1_RVT)
+                                                          0.00       0.08 r
+  u_systolic/u_skew_buffer/r3_d1_reg[13]/Q (DFFARX1_RVT)
+                                                          0.19 &     0.27 f
+  U7023/Y (AO21X1_RVT)                                    0.08 &     0.34 f
+  u_systolic/u_skew_buffer/r3_d2_reg[13]/D (DFFARX1_RVT)
+                                                          0.00 &     0.34 f
+  data arrival time                                                  0.34
+
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (propagated)                        0.23       0.23
+  clock reconvergence pessimism                           0.00       0.23
+  u_systolic/u_skew_buffer/r3_d2_reg[13]/CLK (DFFARX1_RVT)           0.23 r
+  library hold time                                      -0.00       0.23
+  data required time                                                 0.23
+  ------------------------------------------------------------------------------
+  data required time                                                 0.23
+  data arrival time                                                 -0.34
+  ------------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+1

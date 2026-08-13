@@ -1,0 +1,52 @@
+****************************************
+Report : power
+        -significant_digits 2
+Design : accelerator_top
+Version: V-2023.12
+Date   : Thu May  7 15:10:15 2026
+****************************************
+Information: Activity for scenario func.slow was cached, no propagation required. (POW-005)
+Mode: func
+Corner: slow
+Scenario: func.slow
+Voltage: 0.95
+Temperature: 125.00
+
+Voltage Unit         : 1V
+Capacitance Unit     : 1fF
+Time Unit            : 1ns
+Temperature Unit     : 1C
+Dynamic Power Unit   : 1pW
+Leakage Power Unit   : 1pW
+
+Switched supply net power scaling:
+scaling for leakage power
+
+Supply nets:
+VDD (power) probability 1.00 (default)
+VSS (ground) probability 1.00 (default)
+
+  Cell Internal Power    = 1.94e+09 pW ( 83.2%)
+  Net Switching Power    = 3.93e+08 pW ( 16.8%)
+Total Dynamic Power      = 2.33e+09 pW (100.0%)
+
+Cell Leakage Power       = 1.10e+10 pW
+
+
+  Attributes
+  ----------
+      u  -  User defined power group
+      i  -  Includes clock pin internal power
+
+Power Group         Internal Power        Switching Power          Leakage Power            Total Power    (   %  )    Attrs
+-----------------------------------------------------------------------------------------------------------------------------
+io_pad                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+memory                    0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+black_box                 0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+clock_network             1.93e+09               3.56e+08               9.52e+07               2.38e+09    ( 17.9%)        i
+register                  1.59e+06               1.26e+05               1.61e+09               1.61e+09    ( 12.1%)         
+sequential                0.00e+00               0.00e+00               0.00e+00               0.00e+00    (  0.0%)         
+combinational             1.24e+07               3.73e+07               9.25e+09               9.30e+09    ( 70.0%)         
+-----------------------------------------------------------------------------------------------------------------------------
+Total                     1.94e+09 pW            3.93e+08 pW            1.10e+10 pW            1.33e+10 pW
+1

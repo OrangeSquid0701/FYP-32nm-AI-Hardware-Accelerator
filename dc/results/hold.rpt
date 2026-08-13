@@ -1,0 +1,52 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay min
+        -max_paths 1
+Design : accelerator_top
+Version: V-2023.12-SP2
+Date   : Sat May  2 17:43:04 2026
+****************************************
+
+ * Some/all delay information is back-annotated.
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: ss0p95v125c   Library: saed32rvt_ss0p95v125c
+Wire Load Model Mode: Inactive.
+
+  Startpoint: u_systolic/u_bus/reg_load_weights_reg[21]
+              (rising edge-triggered flip-flop clocked by HCLK)
+  Endpoint: u_systolic/u_bus/reg_load_weights_reg[21]
+            (rising edge-triggered flip-flop clocked by HCLK)
+  Path Group: HCLK
+  Path Type: min
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_systolic/u_bus/reg_load_weights_reg[21]/CLK (DFFARX1_RVT)
+                                                          0.00 #     0.00 r
+  u_systolic/u_bus/reg_load_weights_reg[21]/Q (DFFARX1_RVT)
+                                                          0.19       0.19 f
+  U17925/Y (AO22X1_RVT)                                   0.05 *     0.25 f
+  u_systolic/u_bus/reg_load_weights_reg[21]/D (DFFARX1_RVT)
+                                                          0.00 *     0.25 f
+  data arrival time                                                  0.25
+
+  clock HCLK (rise edge)                                  0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  u_systolic/u_bus/reg_load_weights_reg[21]/CLK (DFFARX1_RVT)
+                                                          0.00       0.00 r
+  library hold time                                       0.01       0.01
+  data required time                                                 0.01
+  --------------------------------------------------------------------------
+  data required time                                                 0.01
+  data arrival time                                                 -0.25
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.24
+
+
+1

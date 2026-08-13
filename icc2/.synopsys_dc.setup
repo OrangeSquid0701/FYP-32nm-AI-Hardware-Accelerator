@@ -1,0 +1,46 @@
+set LIB_ROOT /data/synopsys/lib/saed32nm/lib
+
+set RVT_LIB "saed32rvt_ss0p95v125c.db"
+
+set RVT_LIB_SEARCH_PATH "$LIB_ROOT/stdcell_rvt/db_nldm"
+
+set search_path "$search_path \
+                $RVT_LIB_SEARCH_PATH"
+
+set_app_var target_library $RVT_LIB
+
+set_app_var synthetic_library dw_foundation.sldb
+set_app_var link_library "* $target_library $synthetic_library"
+define_design_lib default -path ./work
+
+set mw_design_library ACCEL_DESIGN_LIB
+set mw_reference_library "$LIB_ROOT/stdcell_rvt/milkyway/saed32nm_rvt_1p9m"
+set TECH_FILE "$LIB_ROOT/tech/milkyway/saed32nm_1p9m_mw.tf"
+
+set MAP_FILE "$LIB_ROOT/tech/star_rc/saed32nm_tf_itf_tluplus.map"
+set TLUPLUS_MAX_FILE "$LIB_ROOT/tech/star_rc/saed32nm_1p9m_Cmax.tluplus"
+set TLUPLUS_MIN_FILE "$LIB_ROOT/tech/star_rc/saed32nm_1p9m_Cmin.tluplus"
+
+set MW_POWER_NET       "VDD"
+set MW_POWER_PORT      "VDD"
+set MW_GROUND_NET      "VSS"
+set MW_GROUND_PORT     "VSS"
+set MIN_ROUTING_LAYER  "M1"
+set MAX_ROUTING_LAYER  "M6"
+
+if { [shell_is_in_topographical_mode] || ($::synopsys_program_name=="icc_shell") } {
+    if {![file isdirectory $mw_design_library ]} {
+      create_mw_lib   -technology $TECH_FILE \
+                      -mw_reference_library $mw_reference_library \
+                      $mw_design_library
+    } else {
+      set_mw_lib_reference $mw_design_library \
+        -mw_reference_library $mw_reference_library
+    }
+
+    open_mw_lib     $mw_design_library
+       set_tlu_plus_files -max_tluplus $TLUPLUS_MAX_FILE \
+                       -min_tluplus $TLUPLUS_MIN_FILE \
+                       -tech2itf_map $MAP_FILE
+}
+
